@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Blog Post</title>
+    <!-- Sertakan file CSS dan JS dari CKEditor jika diperlukan -->
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+</head>
+<body>
+    <h1>Create a New Blog Post</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Inisialisasi CKEditor pada field 'content' -->
+    <script>
+        CKEDITOR.replace('id_content');
+    </script>
+</body>
+</html>

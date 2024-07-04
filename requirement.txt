@@ -1,3 +1,4 @@
 ckeditor
+django-ckeditor==6.7.0
 django
 pillow
