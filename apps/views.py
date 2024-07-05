@@ -15,7 +15,7 @@ def custom_login(request):
             if user is not None:
                 login(request, user)
                 if user.role == 'admin':
-                    return redirect('tao_admin')
+                    return redirect('admin:index')
                 else:
                     return redirect('user_dash')
             else:

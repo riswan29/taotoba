@@ -5,7 +5,7 @@ from django.urls import path, include
 from adminTao.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('riswan/', admin.site.urls),
     path('', include('apps.urls')),
     path('register', register, name='register'),
     path('tao', include('adminTao.urls')),

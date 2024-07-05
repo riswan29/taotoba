@@ -28,7 +28,8 @@ class BlogPost(models.Model):
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     category = models.CharField(choices=KATEGORI_OPSI, max_length=20)
-    content = RichTextUploadingField()
+    kata_kunci = models.TextField()
+    content = RichTextUploadingField(max_length=255)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     
