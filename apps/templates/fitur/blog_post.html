@@ -13,6 +13,7 @@
                 <p>By {{ post.author.username }} on {{ post.created_at }}</p>
                 <p>Category: {{ post.category }}</p>
                 <div>{{ post.content|safe }}</div>
+                <a href="https://api.whatsapp.com/send?text={{ post.title }}%20{{ request.build_absolute_uri }}" target="_blank">Share on WhatsApp</a>
             </li>
         {% endfor %}
     </ul>
